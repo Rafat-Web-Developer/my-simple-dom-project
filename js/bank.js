@@ -1,3 +1,12 @@
+function validation(fieldId){
+    const value = document.getElementById(fieldId).value;
+    if (value != '' && isNaN(value) == false) {
+        return true;
+    }else{
+        return false;
+    }
+}
+
 function getInputData(fieldId){
     const field = document.getElementById(fieldId);
     const fieldValue = field.value;
@@ -33,17 +42,28 @@ function totalBalance(elementId, currentTotalAmount, newInputAmount, checkDeposi
 }
 
 document.getElementById('depositBtn').addEventListener('click', function () {
-    const depositAmount = getInputData('deposit_amount');
-    const currentDepositAmount = getElementData('current_deposit');
-    const currentTotalAmount = getElementData('current_total_balance');
-    addIndividualAmount('current_deposit', currentDepositAmount, depositAmount);
-    totalBalance('current_total_balance', currentTotalAmount, depositAmount, true);
+    const valid = validation('deposit_amount');
+    if(valid == true){
+        const depositAmount = getInputData('deposit_amount');
+        const currentDepositAmount = getElementData('current_deposit');
+        const currentTotalAmount = getElementData('current_total_balance');
+        addIndividualAmount('current_deposit', currentDepositAmount, depositAmount);
+        totalBalance('current_total_balance', currentTotalAmount, depositAmount, true);
+    }else{
+        alert('Please Enter Valid Deposit Amount');
+    }
+    
 });
 
 document.getElementById('withdrawBtn').addEventListener('click', function () {
-    const withdrawAmount = getInputData('withdraw_amount');
-    const currentWithdrawAmount = getElementData('current_withdraw');
-    const currentTotalAmount = getElementData('current_total_balance');
-    addIndividualAmount('current_withdraw', currentWithdrawAmount, withdrawAmount);
-    totalBalance('current_total_balance', currentTotalAmount, withdrawAmount, false);
+    const valid = validation('withdraw_amount');
+    if(valid == true){
+        const withdrawAmount = getInputData('withdraw_amount');
+        const currentWithdrawAmount = getElementData('current_withdraw');
+        const currentTotalAmount = getElementData('current_total_balance');
+        addIndividualAmount('current_withdraw', currentWithdrawAmount, withdrawAmount);
+        totalBalance('current_total_balance', currentTotalAmount, withdrawAmount, false);
+    }else{
+        alert('Please Enter Valid Withdraw Amount');
+    }
 });
