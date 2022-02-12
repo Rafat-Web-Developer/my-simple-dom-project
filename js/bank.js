@@ -21,10 +21,15 @@ function addIndividualAmount(elementId ,currentAmount, newInputAmount){
     element.innerText = totalAmount;
 }
 
-function totalBalance(elementId, currentTotalAmount, newInputAmount){
+function totalBalance(elementId, currentTotalAmount, newInputAmount, checkDepositOrNot){
     const element = document.getElementById(elementId);
-    const totalAmount = currentTotalAmount + newInputAmount;
-    element.innerText = totalAmount;
+    if(checkDepositOrNot == true){
+        const totalAmount = currentTotalAmount + newInputAmount;
+        element.innerText = totalAmount;
+    }else{
+        const totalAmount = currentTotalAmount - newInputAmount;
+        element.innerText = totalAmount;
+    }
 }
 
 document.getElementById('depositBtn').addEventListener('click', function () {
@@ -32,5 +37,13 @@ document.getElementById('depositBtn').addEventListener('click', function () {
     const currentDepositAmount = getElementData('current_deposit');
     const currentTotalAmount = getElementData('current_total_balance');
     addIndividualAmount('current_deposit', currentDepositAmount, depositAmount);
-    totalBalance('current_total_balance', currentTotalAmount, depositAmount);
+    totalBalance('current_total_balance', currentTotalAmount, depositAmount, true);
+});
+
+document.getElementById('withdrawBtn').addEventListener('click', function () {
+    const withdrawAmount = getInputData('withdraw_amount');
+    const currentWithdrawAmount = getElementData('current_withdraw');
+    const currentTotalAmount = getElementData('current_total_balance');
+    addIndividualAmount('current_withdraw', currentWithdrawAmount, withdrawAmount);
+    totalBalance('current_total_balance', currentTotalAmount, withdrawAmount, false);
 });
