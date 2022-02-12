@@ -1,6 +1,7 @@
 function validation(fieldId){
     const value = document.getElementById(fieldId).value;
-    if (value != '' && isNaN(value) == false) {
+    const amount = parseFloat(value); 
+    if (value != '' && isNaN(value) == false && amount > 0) {
         return true;
     }else{
         return false;
@@ -61,8 +62,13 @@ document.getElementById('withdrawBtn').addEventListener('click', function () {
         const withdrawAmount = getInputData('withdraw_amount');
         const currentWithdrawAmount = getElementData('current_withdraw');
         const currentTotalAmount = getElementData('current_total_balance');
-        addIndividualAmount('current_withdraw', currentWithdrawAmount, withdrawAmount);
-        totalBalance('current_total_balance', currentTotalAmount, withdrawAmount, false);
+        if(withdrawAmount > currentTotalAmount){
+            alert('Please Enter Valid Deposit Amount');
+        }else{
+            addIndividualAmount('current_withdraw', currentWithdrawAmount, withdrawAmount);
+            totalBalance('current_total_balance', currentTotalAmount, withdrawAmount, false);
+        }
+        
     }else{
         alert('Please Enter Valid Withdraw Amount');
     }
