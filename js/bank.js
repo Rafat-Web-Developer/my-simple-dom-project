@@ -21,8 +21,16 @@ function addIndividualAmount(elementId ,currentAmount, newInputAmount){
     element.innerText = totalAmount;
 }
 
+function totalBalance(elementId, currentTotalAmount, newInputAmount){
+    const element = document.getElementById(elementId);
+    const totalAmount = currentTotalAmount + newInputAmount;
+    element.innerText = totalAmount;
+}
+
 document.getElementById('depositBtn').addEventListener('click', function () {
     const depositAmount = getInputData('deposit_amount');
     const currentDepositAmount = getElementData('current_deposit');
+    const currentTotalAmount = getElementData('current_total_balance');
     addIndividualAmount('current_deposit', currentDepositAmount, depositAmount);
+    totalBalance('current_total_balance', currentTotalAmount, depositAmount);
 });
