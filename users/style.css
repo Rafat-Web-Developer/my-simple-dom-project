@@ -10,3 +10,8 @@
   cursor: pointer;
   color: rgb(37, 90, 37) !important;
 }
+.rafat-enter-key-btn:hover {
+  cursor: pointer;
+  color: #ffffff !important;
+  background-color: #f33b3b !important;
+}
