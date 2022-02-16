@@ -18,3 +18,7 @@ function generatePin(){
     const pin = createPin();
     showFieldValue('showGeneratePin', pin);
 }
+
+document.getElementById('key').addEventListener('click', function (event){
+    // console.log(event.target.innerText);
+});

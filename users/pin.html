@@ -58,47 +58,49 @@
           
         </section>
         <section>
-            <div class="row d-flex justify-content-center">
-                <div class="col-12 col-md-5 bg-success p-5 rafat-height m-2 rounded">
-                    <div class="d-flex justify-content-center">
-                        <input type="text" class="form-control w-75 text-end fw-bold text-success" id="showGeneratePin">
-                    </div>
-                    <div class="generateBtn text-center mt-5">
-                        <button type="button" class="btn btn-light text-success rounded-circle fw-bold fs-5" id="generateBtn" onclick="generatePin()">Generate</button>
-                    </div>
+          <div class="row d-flex justify-content-center">
+            <div class="col-12 col-md-5 bg-success p-5 rafat-height m-2 rounded">
+                <div class="d-flex justify-content-center">
+                    <input type="text" class="form-control w-75 text-end fw-bold text-success" id="showGeneratePin">
                 </div>
-                <div class="col-12 col-md-5 bg-success p-5 rafat-height m-2 rounded">
-                    <div class="d-flex justify-content-center">
-                        <input type="text" class="form-control w-75 text-end fw-bold text-success">
-                    </div>
-                    <div class="numbers mt-3 w-75 mx-auto">
-                      <div class="d-flex flex-column align-items-center">
-
-                        <div class="row row-col-1 gap-4 w-75 my-2">
-                          <div class="col rounded-3 py-3 fw-bold text-success fs-5 text-center bg-light rafat-cal-button">7</div>
-                          <div class="col rounded-3 py-3 fw-bold text-success fs-5 text-center bg-light rafat-cal-button">8</div>
-                          <div class="col rounded-3 py-3 fw-bold text-success fs-5 text-center bg-light rafat-cal-button">9</div>
-                        </div>
-                        <div class="row row-col-1 gap-4 w-75 my-2">
-                          <div class="col rounded-3 py-3 fw-bold text-success fs-5 text-center bg-light rafat-cal-button">4</div>
-                          <div class="col rounded-3 py-3 fw-bold text-success fs-5 text-center bg-light rafat-cal-button">5</div>
-                          <div class="col rounded-3 py-3 fw-bold text-success fs-5 text-center bg-light rafat-cal-button">6</div>
-                        </div>
-                        <div class="row row-col-1 gap-4 w-75 my-2">
-                          <div class="col rounded-3 py-3 fw-bold text-success fs-5 text-center bg-light rafat-cal-button">1</div>
-                          <div class="col rounded-3 py-3 fw-bold text-success fs-5 text-center bg-light rafat-cal-button">2</div>
-                          <div class="col rounded-3 py-3 fw-bold text-success fs-5 text-center bg-light rafat-cal-button">3</div>
-                        </div>
-                        <div class="row row-col-1 gap-4 w-75 my-2">
-                          <div class="col rounded-3 py-3 fw-bold text-success fs-5 text-center bg-light rafat-cal-button"><</div>
-                          <div class="col rounded-3 py-3 fw-bold text-success fs-5 text-center bg-light rafat-cal-button">0</div>
-                          <div class="col rounded-3 py-3 fw-bold text-success fs-5 text-center bg-light rafat-cal-button">c</div>
-                          </div>
-                          <button class="btn btn-danger text-white fw-bold w-75 mt-3">Submit</button>
-                        </div>
-                      </div>
-                  </div>
+                <div class="generateBtn text-center mt-5">
+                    <button type="button" class="btn btn-light text-success rounded-circle fw-bold fs-5" id="generateBtn" onclick="generatePin()">Generate</button>
+                </div>
+            </div>
+            <div class="col-12 col-md-5 bg-success p-5 rafat-height m-2 rounded">
+              <div class="d-flex justify-content-center">
+                  <input type="text" class="form-control w-75 text-end fw-bold text-success" id="showKey">
               </div>
+              <div class="numbers mt-3 w-75 mx-auto">
+                <div class="d-flex flex-column align-items-center" id="key">
+
+                  <div class="row row-col-1 gap-4 w-75 my-2">
+                    <div class="col rounded-3 py-3 fw-bold text-success fs-5 text-center bg-light rafat-cal-button">7</div>
+                    <div class="col rounded-3 py-3 fw-bold text-success fs-5 text-center bg-light rafat-cal-button">8</div>
+                    <div class="col rounded-3 py-3 fw-bold text-success fs-5 text-center bg-light rafat-cal-button">9</div>
+                  </div>
+                  <div class="row row-col-1 gap-4 w-75 my-2">
+                    <div class="col rounded-3 py-3 fw-bold text-success fs-5 text-center bg-light rafat-cal-button">4</div>
+                    <div class="col rounded-3 py-3 fw-bold text-success fs-5 text-center bg-light rafat-cal-button">5</div>
+                    <div class="col rounded-3 py-3 fw-bold text-success fs-5 text-center bg-light rafat-cal-button">6</div>
+                  </div>
+                  <div class="row row-col-1 gap-4 w-75 my-2">
+                    <div class="col rounded-3 py-3 fw-bold text-success fs-5 text-center bg-light rafat-cal-button">1</div>
+                    <div class="col rounded-3 py-3 fw-bold text-success fs-5 text-center bg-light rafat-cal-button">2</div>
+                    <div class="col rounded-3 py-3 fw-bold text-success fs-5 text-center bg-light rafat-cal-button">3</div>
+                  </div>
+                  <div class="row row-col-1 gap-4 w-75 my-2">
+                    <div class="col rounded-3 py-3 fw-bold text-success fs-5 text-center bg-light rafat-cal-button"><</div>
+                    <div class="col rounded-3 py-3 fw-bold text-success fs-5 text-center bg-light rafat-cal-button">0</div>
+                    <div class="col rounded-3 py-3 fw-bold text-success fs-5 text-center bg-light rafat-cal-button">c</div>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex justify-content-center mt-3">
+                <button type="button" class="btn btn-danger w-75 fw-bold">Submit</button>
+              </div>
+            </div>
+          </div>
         </section>
     </main>
 
