@@ -20,5 +20,17 @@ function generatePin(){
 }
 
 document.getElementById('key').addEventListener('click', function (event){
-    // console.log(event.target.innerText);
+   const showKeyField =  document.getElementById('showKey');
+   const value = showKeyField.value;
+   if(event.target.innerText == 'c'){
+        showKeyField.value = '';
+   }else if(event.target.innerText == '<'){
+        const l = value.length;
+        const newString = value.substring(0, l - 1);
+        showKeyField.value = newString; 
+   }else if(showKeyField.value != ''){
+        showKeyField.value = showKeyField.value + event.target.innerText;
+   }else{
+        showKeyField.value = event.target.innerText;
+   }
 });
