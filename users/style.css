@@ -10,9 +10,3 @@
   cursor: pointer;
   color: rgb(37, 90, 37) !important;
 }
-#sucess-message {
-  display: none;
-}
-#wrong-message {
-  display: none;
-}

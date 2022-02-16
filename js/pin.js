@@ -34,3 +34,15 @@ document.getElementById('key').addEventListener('click', function (event){
         showKeyField.value = event.target.innerText;
    }
 });
+
+function checkPin(){
+    const showGeneratePin = document.getElementById('showGeneratePin');
+    const enteredKey = document.getElementById('showKey');
+    if(showGeneratePin.value == enteredKey.value){
+        document.getElementById('sm').classList.remove("d-none");
+        document.getElementById('wm').classList.add("d-none");
+    }else{
+        document.getElementById('wm').classList.remove("d-none");
+        document.getElementById('sm').classList.add("d-none");
+    }
+}
