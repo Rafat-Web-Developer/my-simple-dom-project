@@ -6,3 +6,7 @@
   width: 150px;
   height: 150px;
 }
+.rafat-cal-button:hover {
+  cursor: pointer;
+  color: rgb(37, 90, 37) !important;
+}
